@@ -20,15 +20,21 @@
     document.addEventListener("keydown", (e) => { if (e.key === "Escape") setOpen(false); });
   }
 
-  /* ---- Age (computed so it never goes stale) ---- */
-  const ageEl = $("[data-birth]");
-  if (ageEl) {
-    const b = new Date(ageEl.dataset.birth);
-    const now = new Date();
-    let age = now.getFullYear() - b.getFullYear();
-    const hadBirthday = now.getMonth() > b.getMonth() || (now.getMonth() === b.getMonth() && now.getDate() >= b.getDate());
-    if (!hadBirthday) age -= 1;
-    if (age > 0 && age < 120) ageEl.textContent = age;
+  /* ---- Resume dropdown (Download My CV) ---- */
+  const dd = $(".nav-dd");
+  if (dd) {
+    const toggle = $(".dd-toggle", dd);
+    const menu = $(".dropdown", dd);
+    const setDD = (open) => {
+      toggle.setAttribute("aria-expanded", String(open));
+      menu.hidden = !open;
+    };
+    toggle.addEventListener("click", (e) => { e.stopPropagation(); setDD(menu.hidden); });
+    menu.addEventListener("click", () => setDD(false));
+    document.addEventListener("click", (e) => { if (!dd.contains(e.target)) setDD(false); });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && !menu.hidden) { setDD(false); toggle.focus(); }
+    });
   }
 
   /* ---- Rotating role in the hero ---- */
@@ -48,14 +54,14 @@
     }
   }
 
-  /* ---- Certificates carousel ---- */
-  const carousel = $("#cert-carousel");
-  if (carousel) {
+  /* ---- Carousels (certificates + testimonials share this) ---- */
+  $$(".carousel").forEach((carousel) => {
     const track = $(".carousel-track", carousel);
     const prev = $("[data-dir='prev']", carousel);
     const next = $("[data-dir='next']", carousel);
+    if (!track || !prev || !next) return;
 
-    // Distance of one step = width of a slide plus the flex gap.
+    // One step = width of a slide plus the flex gap.
     const step = () => {
       const first = track.firstElementChild;
       if (!first) return track.clientWidth;
@@ -67,12 +73,19 @@
       prev.disabled = track.scrollLeft <= 2;
       next.disabled = track.scrollLeft >= max;
     };
-    prev.addEventListener("click", () => track.scrollBy({ left: -step(), behavior: reduceMotion ? "auto" : "smooth" }));
-    next.addEventListener("click", () => track.scrollBy({ left: step(), behavior: reduceMotion ? "auto" : "smooth" }));
+    const go = (dir) => {
+      track.scrollBy({ left: dir * step(), behavior: reduceMotion ? "auto" : "smooth" });
+      // Belt and braces: refresh the arrows once the scroll has settled.
+      setTimeout(update, reduceMotion ? 50 : 500);
+    };
+
+    prev.addEventListener("click", () => go(-1));
+    next.addEventListener("click", () => go(1));
     track.addEventListener("scroll", update, { passive: true });
+    track.addEventListener("scrollend", update);
     window.addEventListener("resize", update);
     update();
-  }
+  });
 
   /* ---- Lightbox (certificate images) ---- */
   const box = $("#lightbox");
@@ -94,6 +107,29 @@
     // No <dialog> support: just open the image in a new tab.
     lightboxTriggers.forEach((btn) =>
       btn.addEventListener("click", () => window.open(btn.dataset.lightbox, "_blank", "noopener")));
+  }
+
+  /* ---- Contact form ----
+     The site is static (no server), so instead of posting somewhere we open the
+     visitor's email app with the message already written. */
+  const form = $("#contact-form");
+  if (form) {
+    const status = $("#form-status");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const name = String(data.get("name") || "").trim();
+      const email = String(data.get("email") || "").trim();
+      const topic = String(data.get("topic") || "").trim();
+      const message = String(data.get("message") || "").trim();
+
+      const to = form.getAttribute("action").replace(/^mailto:/, "");
+      const subject = `Portfolio enquiry: ${topic}`;
+      const body = `${message}\n\n${name}\n${email}`;
+      window.location.href =
+        `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      if (status) status.textContent = "Opening your email app. If nothing happens, email me directly at " + to + ".";
+    });
   }
 
   /* ---- Scroll-spy for nav links ---- */

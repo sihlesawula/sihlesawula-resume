@@ -4,15 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Sihle Sawula | Web Developer &amp; Graphic Designer in Cape Town</title>
-  <meta name="description" content="Sihle Sawula is a web developer, graphic designer and illustrator based in Cape Town, South Africa. Browse websites built for real clients, and get in touch for freelance work.">
+  <title>Sihle Sawula | Software Developer in Cape Town</title>
+  <meta name="description" content="Sihle Sawula is a software developer (web, frontend, backend and full stack) based in Cape Town, South Africa. Browse websites built for real clients and get in touch.">
   <meta name="author" content="Sihle Sawula">
   <meta name="theme-color" content="#0b1a36">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Sihle Sawula | Web Developer &amp; Graphic Designer">
-  <meta property="og:description" content="Websites and graphic design for real clients, built in Cape Town.">
-  <meta property="og:image" content="Img/propic.jpg">
+  <meta property="og:title" content="Sihle Sawula | Software Developer">
+  <meta property="og:description" content="Websites and software for real clients, built in Cape Town.">
+  <meta property="og:image" content="Img/sihle.jpg">
 
   <link rel="icon" href="Img/s-letter-logo-3d-type-logo-free-vector%20(1)%20-%20Copy.jpg">
 
@@ -35,8 +35,13 @@
       <nav id="nav-links" class="nav-links" aria-label="Main">
         <a href="#about">About</a>
         <a href="#work">Work</a>
-        <a href="#services">Services</a>
-        <a href="#resume">Resume</a>
+        <div class="nav-dd">
+          <a href="#resume">Resume</a>
+          <button class="dd-toggle" type="button" aria-label="Resume menu" aria-expanded="false" aria-controls="cv-menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+          <ul id="cv-menu" class="dropdown" hidden>
+            <li><a href="Sihle%20Sawula%20CV%202026.pdf" download="Sihle Sawula CV 2026.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 20h16"/></svg>Download My CV</a></li>
+          </ul>
+        </div>
         <a href="#certificates">Certificates</a>
         <a href="#testimonials">Clients</a>
         <a href="#contact">Contact</a>
@@ -54,15 +59,14 @@
     <section id="top" class="hero">
       <!-- Photo sits behind the hero, anchored to the right-hand side -->
       <div class="hero-visual">
-        <img src="Img/propic.jpg" alt="Portrait of Sihle Sawula in a navy blazer" width="960" height="1280" fetchpriority="high">
+        <img src="Img/sihle.jpg" alt="Portrait of Sihle Sawula smiling" width="1920" height="1280" fetchpriority="high">
       </div>
 
       <div class="container">
         <div class="hero-copy">
-          <p class="eyebrow">Cape Town, South Africa</p>
-          <h1>Hi, I'm <span class="accent">Sihle Sawula.</span></h1>
-          <p class="hero-role">I'm a <strong id="role" data-roles="Web Developer|Graphic Designer|Illustrator">Web Developer</strong></p>
-          <p class="hero-lede">I turn ideas and artwork into websites and designs that look sharp and work properly, for businesses, artists and organisations. 5+ years of delivering from first concept to polished final.</p>
+          <h1>I'm Sihle Sawula.</h1>
+          <p class="hero-role">I'm a <strong id="role" data-roles="Software Developer|Web Developer|Frontend Developer|Backend Developer|Full Stack Developer">Software Developer</strong></p>
+          <p class="hero-lede">I turn ideas and artwork into websites and designs that look sharp and work properly, for businesses, artists and organisations. 3 years of delivering from first concept to polished final.</p>
           <div class="hero-actions">
             <a class="btn btn--primary" href="#work">See my work</a>
             <a class="btn btn--ghost" href="#contact">Get in touch</a>
@@ -71,7 +75,7 @@
         </div>
 
         <div class="stats reveal" aria-label="At a glance">
-          <div class="stat"><b>5+</b><span>Years experience</span></div>
+          <div class="stat"><b>3</b><span>Years experience</span></div>
           <div class="stat"><b>5</b><span>Live client websites</span></div>
           <div class="stat"><b>4</b><span>Client testimonials</span></div>
           <div class="stat"><b>2</b><span>Disciplines: code &amp; design</span></div>
@@ -90,18 +94,14 @@
         <div class="about-grid">
           <div class="about-text reveal">
             <p>Good day! My name is Sihle Sawula and I live in Cape Town, South Africa. I'm a web developer and graphic designer who loves turning artwork into something real, whether it's a personal project or something a client asked for.</p>
-            <p>With 5+ years of experience, I design and build user-centred digital and print marketing material from the first idea to the final, polished deliverable. I care about getting the details right and handing things over on time.</p>
+            <p>With 3 years of experience, I design and build user-centred digital and print marketing material from the first idea to the final, polished deliverable. I care about getting the details right and handing things over on time.</p>
             <p>Have a look through my work, and feel free to get in touch if you'd like to build something together.</p>
           </div>
 
           <ul class="facts reveal" aria-label="Quick facts">
-            <li><span>Based in</span><span>Cape Town, South Africa</span></li>
-            <li><span>Birthday</span><span>06 September 1999</span></li>
-            <li><span>Age</span><span data-birth="1999-09-06">27</span></li>
             <li><span>Qualification</span><span>Web &amp; Graphic Design</span></li>
             <li><span>Email</span><span><a href="mailto:sihlesawula4@gmail.com">sihlesawula4@gmail.com</a></span></li>
             <li><span>Phone</span><span><a href="tel:+27748403931">(+27) 74 840 3931</a></span></li>
-            <li><span>Freelance</span><span>Available</span></li>
           </ul>
         </div>
       </div>
@@ -182,37 +182,8 @@
       </div>
     </section>
 
-    <!-- ============ Services ============ -->
-    <section id="services" class="section section--alt">
-      <div class="container">
-        <div class="section-head reveal">
-          <p class="eyebrow">What I do</p>
-          <h2>Services</h2>
-          <p>Whether it's a full website or a single poster, I handle it from concept to final delivery.</p>
-        </div>
-
-        <div class="cards">
-          <div class="card reveal">
-            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg></div>
-            <h3>Website design &amp; development</h3>
-            <p>Responsive, fast websites for businesses, artists and organisations, built to be easy to use and easy to maintain.</p>
-          </div>
-          <div class="card reveal">
-            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></div>
-            <h3>Graphic design</h3>
-            <p>Posters, flyers and marketing material for print and digital, designed to get noticed.</p>
-          </div>
-          <div class="card reveal">
-            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19l7-7 3 3-7 7zM18 13l-1.5-7.5L2 2l3.5 14.5L13 18zM2 2l7.6 7.6"/><circle cx="11" cy="11" r="2"/></svg></div>
-            <h3>Illustration</h3>
-            <p>Custom illustrated artwork and composites that bring a concept to life.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- ============ Resume ============ -->
-    <section id="resume" class="section">
+    <section id="resume" class="section section--alt">
       <div class="container">
         <div class="section-head reveal">
           <p class="eyebrow">Resume</p>
@@ -225,7 +196,7 @@
             <div class="timeline">
               <div class="timeline-item">
                 <h4>Freelance Web Developer &amp; Graphic Designer</h4>
-                <p class="timeline-meta">5+ years · Cape Town, Western Cape</p>
+                <p class="timeline-meta">3 years · Cape Town, Western Cape</p>
                 <ul>
                   <li>Designed and developed websites for clients across retail, healthcare, finance, music and community organisations.</li>
                   <li>Created digital and print marketing material, including posters and promotional graphics, from concept to final delivery.</li>
@@ -303,7 +274,7 @@
             </div>
 
             <div class="resume-cta">
-              <button class="btn btn--ghost" type="button" onclick="window.print()">Save resume as PDF</button>
+              <a class="btn btn--ghost" href="Sihle%20Sawula%20CV%202026.pdf" download="Sihle Sawula CV 2026.pdf">Download my CV</a>
             </div>
           </div>
         </div>
@@ -311,16 +282,16 @@
     </section>
 
     <!-- ============ Certificates ============ -->
-    <section id="certificates" class="section section--alt">
+    <section id="certificates" class="section">
       <div class="container">
         <div class="section-head reveal">
           <p class="eyebrow">Qualifications</p>
           <h2>Certificates</h2>
-          <p>Use the arrows to browse my certificates and qualifications.</p>
+          <p>Use the arrows to browse, and click a certificate to view it full size.</p>
         </div>
 
         <!--
-          TO ADD A CERTIFICATE: replace a placeholder <figure class="cert"> below with this pattern,
+          TO ADD A CERTIFICATE: add another slide below using this pattern,
           and put the image file in Img/certificates/ :
 
           <figure class="cert">
@@ -330,45 +301,66 @@
             <figcaption><span class="cert-title">Certificate title</span><span class="cert-meta">Issuer · Year</span></figcaption>
           </figure>
         -->
-        <div id="cert-carousel" class="carousel reveal" role="region" aria-roledescription="carousel" aria-label="Certificates">
+        <div id="cert-carousel" class="carousel carousel--certs reveal" role="region" aria-roledescription="carousel" aria-label="Certificates">
           <button class="carousel-btn" type="button" data-dir="prev" aria-label="Previous certificates">
             <svg viewBox="0 0 24 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline vector-effect="non-scaling-stroke" points="20,2 4,24 20,46"/></svg>
           </button>
 
           <div class="carousel-track" tabindex="0" aria-label="Certificate list">
             <figure class="cert">
-              <div class="cert-media cert-media--empty">
-                <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="m8.5 14-1.5 8 5-3 5 3-1.5-8"/></svg>Certificate image coming soon</span>
-              </div>
-              <figcaption><span class="cert-title">Web Development &amp; Graphic Design</span><span class="cert-meta">Boston City Campus · 2019 – 2020</span></figcaption>
+              <button class="cert-media" type="button" data-lightbox="Img/certificates/full-stack-developer.jpg" data-alt="Certificate: YouthCode Software Development Project, Life Choices Academy, Sep 2025" aria-label="View YouthCode Software Development Project certificate full size">
+                <img src="Img/certificates/full-stack-developer.jpg" alt="Certificate: YouthCode Software Development Project, Life Choices Academy, Sep 2025" loading="lazy">
+              </button>
+              <figcaption><span class="cert-title">YouthCode Software Development Project</span><span class="cert-meta">Life Choices Academy · Sep 2025</span></figcaption>
             </figure>
 
             <figure class="cert">
-              <div class="cert-media cert-media--empty">
-                <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="m8.5 14-1.5 8 5-3 5 3-1.5-8"/></svg>Certificate image coming soon</span>
-              </div>
-              <figcaption><span class="cert-title">Certificate title</span><span class="cert-meta">Issuer · Year</span></figcaption>
+              <button class="cert-media" type="button" data-lightbox="Img/certificates/boston-city-campus.jpg" data-alt="Certificate: Introduction to Web &amp; Graphic Design, Boston City Campus, Dec 2020" aria-label="View Introduction to Web &amp; Graphic Design certificate full size">
+                <img src="Img/certificates/boston-city-campus.jpg" alt="Certificate: Introduction to Web &amp; Graphic Design, Boston City Campus, Dec 2020" loading="lazy">
+              </button>
+              <figcaption><span class="cert-title">Introduction to Web &amp; Graphic Design</span><span class="cert-meta">Boston City Campus · Dec 2020</span></figcaption>
             </figure>
 
             <figure class="cert">
-              <div class="cert-media cert-media--empty">
-                <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="m8.5 14-1.5 8 5-3 5 3-1.5-8"/></svg>Certificate image coming soon</span>
-              </div>
-              <figcaption><span class="cert-title">Certificate title</span><span class="cert-meta">Issuer · Year</span></figcaption>
+              <button class="cert-media" type="button" data-lightbox="Img/certificates/ibm-introduction-to-cloud.jpg" data-alt="Certificate: Introduction to Cloud, IBM / Cognitive Class, May 2025" aria-label="View Introduction to Cloud certificate full size">
+                <img src="Img/certificates/ibm-introduction-to-cloud.jpg" alt="Certificate: Introduction to Cloud, IBM / Cognitive Class, May 2025" loading="lazy">
+              </button>
+              <figcaption><span class="cert-title">Introduction to Cloud</span><span class="cert-meta">IBM / Cognitive Class · May 2025</span></figcaption>
             </figure>
 
             <figure class="cert">
-              <div class="cert-media cert-media--empty">
-                <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="m8.5 14-1.5 8 5-3 5 3-1.5-8"/></svg>Certificate image coming soon</span>
-              </div>
-              <figcaption><span class="cert-title">Certificate title</span><span class="cert-meta">Issuer · Year</span></figcaption>
+              <button class="cert-media" type="button" data-lightbox="Img/certificates/introduction-to-cybersecurity.jpg" data-alt="Certificate: Introduction to Cybersecurity, Cisco Networking Academy, May 2025" aria-label="View Introduction to Cybersecurity certificate full size">
+                <img src="Img/certificates/introduction-to-cybersecurity.jpg" alt="Certificate: Introduction to Cybersecurity, Cisco Networking Academy, May 2025" loading="lazy">
+              </button>
+              <figcaption><span class="cert-title">Introduction to Cybersecurity</span><span class="cert-meta">Cisco Networking Academy · May 2025</span></figcaption>
             </figure>
 
             <figure class="cert">
-              <div class="cert-media cert-media--empty">
-                <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="m8.5 14-1.5 8 5-3 5 3-1.5-8"/></svg>Certificate image coming soon</span>
-              </div>
-              <figcaption><span class="cert-title">Certificate title</span><span class="cert-meta">Issuer · Year</span></figcaption>
+              <button class="cert-media" type="button" data-lightbox="Img/certificates/introduction-to-data-science.jpg" data-alt="Certificate: Introduction to Data Science, Cisco Networking Academy, May 2025" aria-label="View Introduction to Data Science certificate full size">
+                <img src="Img/certificates/introduction-to-data-science.jpg" alt="Certificate: Introduction to Data Science, Cisco Networking Academy, May 2025" loading="lazy">
+              </button>
+              <figcaption><span class="cert-title">Introduction to Data Science</span><span class="cert-meta">Cisco Networking Academy · May 2025</span></figcaption>
+            </figure>
+
+            <figure class="cert">
+              <button class="cert-media" type="button" data-lightbox="Img/certificates/creating-compelling-reports.jpg" data-alt="Certificate: Creating Compelling Reports, Cisco Networking Academy, Oct 2025" aria-label="View Creating Compelling Reports certificate full size">
+                <img src="Img/certificates/creating-compelling-reports.jpg" alt="Certificate: Creating Compelling Reports, Cisco Networking Academy, Oct 2025" loading="lazy">
+              </button>
+              <figcaption><span class="cert-title">Creating Compelling Reports</span><span class="cert-meta">Cisco Networking Academy · Oct 2025</span></figcaption>
+            </figure>
+
+            <figure class="cert">
+              <button class="cert-media" type="button" data-lightbox="Img/certificates/engaging-stakeholders-for-success.jpg" data-alt="Certificate: Engaging Stakeholders for Success, Cisco Networking Academy, Oct 2025" aria-label="View Engaging Stakeholders for Success certificate full size">
+                <img src="Img/certificates/engaging-stakeholders-for-success.jpg" alt="Certificate: Engaging Stakeholders for Success, Cisco Networking Academy, Oct 2025" loading="lazy">
+              </button>
+              <figcaption><span class="cert-title">Engaging Stakeholders for Success</span><span class="cert-meta">Cisco Networking Academy · Oct 2025</span></figcaption>
+            </figure>
+
+            <figure class="cert">
+              <button class="cert-media" type="button" data-lightbox="Img/certificates/managing-a-business-venture.jpg" data-alt="Certificate: Managing a Business Venture, Cisco Networking Academy, Oct 2025" aria-label="View Managing a Business Venture certificate full size">
+                <img src="Img/certificates/managing-a-business-venture.jpg" alt="Certificate: Managing a Business Venture, Cisco Networking Academy, Oct 2025" loading="lazy">
+              </button>
+              <figcaption><span class="cert-title">Managing a Business Venture</span><span class="cert-meta">Cisco Networking Academy · Oct 2025</span></figcaption>
             </figure>
           </div>
 
@@ -380,72 +372,105 @@
     </section>
 
     <!-- ============ Testimonials ============ -->
-    <section id="testimonials" class="section">
+    <section id="testimonials" class="section section--alt">
       <div class="container">
         <div class="section-head reveal">
           <p class="eyebrow">Kind words</p>
           <h2>What clients say</h2>
         </div>
 
-        <div class="quotes">
-          <figure class="quote reveal">
+        <div id="quote-carousel" class="carousel carousel--quotes reveal" role="region" aria-roledescription="carousel" aria-label="Client testimonials">
+          <button class="carousel-btn" type="button" data-dir="prev" aria-label="Previous testimonials"><svg viewBox="0 0 24 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline vector-effect="non-scaling-stroke" points="20,2 4,24 20,46"/></svg></button>
+
+          <div class="carousel-track" tabindex="0" aria-label="Testimonial list">
+            <figure class="quote">
             <blockquote>At KT Emergency Services and Training we received great receptions from Sihle Sawula with regards to the Website that he developed for the company in which it captured the Purpose of the Project and its Objectives. We would recommend his services to others who wish to showcase his work.</blockquote>
             <figcaption>
               <img src="Img/KT-Emergency-Services.png" alt="" loading="lazy">
               <div><div class="who">KT Emergency Services</div><div class="role">Paramedics company</div></div>
             </figcaption>
           </figure>
-
-          <figure class="quote reveal">
+            <figure class="quote">
             <blockquote>Working with Sihle Sawula has been a game-changer for my online presence. As an artist and producer, I needed a website that not only showcases my work but also captures the essence of my creative vision. Sihle Sawula took the time to understand my brand and crafted a website that’s both visually striking and easy to navigate. The design perfectly reflects my music, art, and creative journey, and it’s already helping me connect with a wider audience. I couldn’t be happier with the result and highly recommend them to anyone looking to elevate their online presence.</blockquote>
             <figcaption>
               <img src="Img/Lil-Amplekz-17_3_2_-removebg-preview%20(1)%20(1).png" alt="" loading="lazy">
               <div><div class="who">Amplekz</div><div class="role">Artist &amp; producer</div></div>
             </figcaption>
           </figure>
-
-          <figure class="quote reveal">
+            <figure class="quote">
             <blockquote>Working with Sihle Sawula has been an enriching and transformative experience. As part of a spiritual institution, it was essential for us to have a website that not only reflects our values and mission but also fosters a sense of peace and connection for our community. The team understood our vision from the start and brought it to life with grace and attention to detail. The website is both beautiful and functional, making it easier for people to connect with us and access our resources. We are deeply grateful for their dedication and expertise, and we wholeheartedly recommend them to others seeking to enhance their online presence with authenticity and purpose.</blockquote>
             <figcaption>
               <img src="Img/lioness.png" alt="" loading="lazy">
               <div><div class="who">Makhosi and Keya Foundation</div><div class="role">Spiritual entity</div></div>
             </figcaption>
           </figure>
-
-          <figure class="quote reveal">
+            <figure class="quote">
             <blockquote>Working with Sihle Sawula has been an absolute pleasure. As a clothing brand owner, having an online presence that truly reflects our style and values is crucial, and they exceeded my expectations in every way. From the initial concept to the final design, the team was attentive, professional, and innovative. The website not only looks amazing but also functions seamlessly, providing a fantastic experience for our customers. I’m incredibly grateful for their expertise and highly recommend them to anyone looking to elevate their brand online!</blockquote>
             <figcaption>
               <img src="Img/96-White-Background.png" alt="" loading="lazy">
               <div><div class="who">Offensiv Apparel</div><div class="role">Clothing store</div></div>
             </figcaption>
           </figure>
+          </div>
+
+          <button class="carousel-btn" type="button" data-dir="next" aria-label="Next testimonials"><svg viewBox="0 0 24 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline vector-effect="non-scaling-stroke" points="4,2 20,24 4,46"/></svg></button>
         </div>
       </div>
     </section>
 
     <!-- ============ Contact ============ -->
-    <section id="contact" class="section section--alt">
+    <section id="contact" class="section">
       <div class="container">
-        <div class="contact-cta reveal">
-          <p class="eyebrow">Contact</p>
-          <h2>Let's build something good.</h2>
-          <p>Need a website, a poster or a fresh look for your brand? Send me a message and I'll get back to you.</p>
-          <a class="btn btn--primary" href="mailto:sihlesawula4@gmail.com">Email me</a>
-        </div>
+        <div class="contact-stage reveal">
 
-        <div class="contact-grid reveal">
-          <a class="contact-card" href="mailto:sihlesawula4@gmail.com">
-            <span class="label">Email</span>
-            <span class="value">sihlesawula4@gmail.com</span>
-          </a>
-          <a class="contact-card" href="tel:+27748403931">
-            <span class="label">Phone</span>
-            <span class="value">+27 74 840 3931</span>
-          </a>
-          <div class="contact-card">
-            <span class="label">Location</span>
-            <span class="value">7395 Mano Street, Cape Town, Western Cape, South Africa</span>
+          <!-- Large centred panel -->
+          <div class="contact-panel">
+            <div class="contact-intro">
+              <p class="eyebrow">Contact</p>
+              <h2>Let's build something good.</h2>
+              <p>Hiring, or have a project in mind? Reach out whichever way suits you and I'll get back to you.</p>
+            </div>
+
+            <ul class="contact-list">
+              <li><a href="mailto:sihlesawula4@gmail.com"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><span><small>Email</small><span class="val">sihlesawula4@gmail.com</span></span></a></li>
+              <li><a href="tel:+27748403931"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span><span><small>Phone</small><span class="val">+27 74 840 3931</span></span></a></li>
+              <li><a href="https://wa.me/27748403931" target="_blank" rel="noopener"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg></span><span><small>WhatsApp</small><span class="val">Message me</span></span></a></li>
+            </ul>
+
+            <div class="contact-links">
+              <a class="btn btn--primary" href="Sihle%20Sawula%20CV%202026.pdf" download="Sihle Sawula CV 2026.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 20h16"/></svg>Download my CV</a>
+              <div class="socials">
+                <a class="icon-btn" href="https://www.linkedin.com/in/sihle-sawula-a20500278/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.5H3.6V9h3.5v11.5z"/></svg></a>
+                <a class="icon-btn" href="https://www.instagram.com/sihle_sawula/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+                <a class="icon-btn" href="https://www.facebook.com/sihle.sawula/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.2h-3.1V7.9c0-.9.3-1.5 1.6-1.5h1.7V3.5c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.1v2.3H7.7V13h2.7v8h3.1z"/></svg></a>
+              </div>
+            </div>
           </div>
+
+          <!-- Floating form, overlapping the panel on the right.
+               Static site = no server, so Send opens the visitor's email app with the message filled in. -->
+          <form id="contact-form" class="contact-form" action="mailto:sihlesawula4@gmail.com" method="post" enctype="text/plain">
+            <h3>Send a message</h3>
+            <label class="field">Your name
+              <input type="text" name="name" autocomplete="name" required>
+            </label>
+            <label class="field">Your email
+              <input type="email" name="email" autocomplete="email" required>
+            </label>
+            <label class="field">I'm reaching out about
+              <select name="topic">
+                <option>A job opportunity</option>
+                <option>A freelance project</option>
+                <option>Something else</option>
+              </select>
+            </label>
+            <label class="field">Message
+              <textarea name="message" rows="4" required></textarea>
+            </label>
+            <button class="btn btn--primary" type="submit">Send message</button>
+            <p id="form-status" class="form-note" role="status" aria-live="polite">Opens your email app with the message ready to send.</p>
+          </form>
+
         </div>
       </div>
     </section>
@@ -456,17 +481,7 @@
   <footer class="site-footer">
     <div class="container footer-row">
       <p style="margin:0">&copy; <span id="year">2026</span> Sihle Sawula. All rights reserved.</p>
-      <div class="socials">
-        <a class="icon-btn" href="https://www.linkedin.com/in/sihle-sawula-a20500278/" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.5H3.6V9h3.5v11.5z"/></svg>
-        </a>
-        <a class="icon-btn" href="https://www.instagram.com/sihle_sawula/" target="_blank" rel="noopener" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
-        </a>
-        <a class="icon-btn" href="https://www.facebook.com/sihle.sawula/" target="_blank" rel="noopener" aria-label="Facebook">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.2h-3.1V7.9c0-.9.3-1.5 1.6-1.5h1.7V3.5c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.1v2.3H7.7V13h2.7v8h3.1z"/></svg>
-        </a>
-      </div>
+      <a href="#top">Back to top &uarr;</a>
     </div>
   </footer>
 
