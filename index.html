@@ -57,12 +57,8 @@
 
     <!-- ============ Hero ============ -->
     <section id="top" class="hero">
-      <!-- Photo sits behind the hero, anchored to the right-hand side -->
-      <div class="hero-visual">
-        <img src="Img/sihle.jpg" alt="Portrait of Sihle Sawula smiling" width="1920" height="1280" fetchpriority="high">
-      </div>
-
       <div class="container">
+        <div class="hero-grid">
         <div class="hero-copy">
           <h1>I'm Sihle Sawula.</h1>
           <p class="hero-role">I'm a <strong id="role" data-roles="Software Developer|Web Developer|Frontend Developer|Backend Developer|Full Stack Developer">Software Developer</strong></p>
@@ -72,6 +68,70 @@
             <a class="btn btn--ghost" href="#contact">Get in touch</a>
           </div>
           <span class="availability">Available for freelance work</span>
+        </div>
+        <!-- Right-hand side: circular portrait with a layered, curved ribbon sweeping across the torso -->
+          <div class="hero-art">
+            <span class="art-glow" aria-hidden="true"></span>
+            <span class="art-ring art-ring--1" aria-hidden="true"></span>
+            <span class="art-ring art-ring--2" aria-hidden="true"></span>
+            <span class="art-blob art-blob--1" aria-hidden="true"></span>
+            <span class="art-blob art-blob--2" aria-hidden="true"></span>
+
+            <div class="portrait-card">
+              <div class="portrait-circle">
+                <img src="Img/sihle.jpg" alt="Portrait of Sihle Sawula smiling, arms crossed" width="1920" height="1280" fetchpriority="high">
+              </div>
+
+              <svg class="ribbon" viewBox="0 0 640 360" fill="none" aria-hidden="true" focusable="false">
+                <defs>
+                  <linearGradient id="rbA" x1="0" y1="0" x2="1" y2="0.35">
+                    <stop offset="0" stop-color="#15318a"/>
+                    <stop offset=".5" stop-color="#2358e0"/>
+                    <stop offset="1" stop-color="#4f8dff"/>
+                  </linearGradient>
+                  <linearGradient id="rbGloss" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#ffffff" stop-opacity=".32"/>
+                    <stop offset=".5" stop-color="#ffffff" stop-opacity="0"/>
+                    <stop offset="1" stop-color="#001240" stop-opacity=".3"/>
+                  </linearGradient>
+                  <linearGradient id="rbB" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0" stop-color="#2a5bd8" stop-opacity="0"/>
+                    <stop offset=".28" stop-color="#3b72f0" stop-opacity=".9"/>
+                    <stop offset=".6" stop-color="#6aa4ff"/>
+                    <stop offset="1" stop-color="#4f8dff" stop-opacity="0"/>
+                  </linearGradient>
+                  <linearGradient id="rbC" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0" stop-color="#7fe0ff" stop-opacity="0"/>
+                    <stop offset=".35" stop-color="#8fe3ff" stop-opacity=".9"/>
+                    <stop offset=".65" stop-color="#b6f0ff"/>
+                    <stop offset="1" stop-color="#7fe0ff" stop-opacity="0"/>
+                  </linearGradient>
+                  <linearGradient id="rbBack" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0" stop-color="#3d7bff" stop-opacity="0"/>
+                    <stop offset=".5" stop-color="#6aa0ff" stop-opacity=".8"/>
+                    <stop offset="1" stop-color="#3d7bff" stop-opacity="0"/>
+                  </linearGradient>
+                  <linearGradient id="rbHi" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0" stop-color="#bcd4ff" stop-opacity="0"/>
+                    <stop offset=".35" stop-color="#ffffff" stop-opacity=".95"/>
+                    <stop offset=".7" stop-color="#9ec1ff" stop-opacity=".8"/>
+                    <stop offset="1" stop-color="#bcd4ff" stop-opacity="0"/>
+                  </linearGradient>
+                  <filter id="rbBlur" x="-5%" y="-40%" width="110%" height="180%"><feGaussianBlur stdDeviation="4"/></filter>
+                </defs>
+
+                <!-- three stacked bands, all arching the same way: a faint back glow, then B and C beneath the main ribbon A -->
+                <path d="M-20 214 C 120 72.7, 520 72.7, 660 214 C 540 96.7, 100 96.7, -20 214 Z" fill="url(#rbBack)"/>
+                <path d="M0 338 C 130 223.3, 510 223.3, 640 338 L 640 352 C 510 237.3, 130 237.3, 0 352 Z" fill="url(#rbC)"/>
+                <path d="M0 292 C 130 177.3, 510 177.3, 640 292 L 640 326 C 510 211.3, 130 211.3, 0 326 Z" fill="url(#rbB)"/>
+                <path d="M0 214 C 130 99.3, 510 99.3, 640 214 C 520 190, 120 190, 0 214 Z" fill="url(#rbA)"/>
+                <path d="M0 214 C 130 99.3, 510 99.3, 640 214 C 520 190, 120 190, 0 214 Z" fill="url(#rbGloss)"/>
+                <!-- glossy highlight along the top edge -->
+                <path d="M0 214 C 130 99.3, 510 99.3, 640 214" stroke="url(#rbHi)" stroke-width="8" filter="url(#rbBlur)" opacity=".55"/>
+                <path d="M0 214 C 130 99.3, 510 99.3, 640 214" stroke="url(#rbHi)" stroke-width="2.4" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
         </div>
 
         <div class="stats reveal" aria-label="At a glance">
@@ -340,6 +400,10 @@
                   <span class="skill-ico"><img src="Img/skills/photoshop-plain.svg" alt="" width="40" height="40" loading="lazy"></span>
                   <span>Photoshop</span>
                 </li>
+                <li class="skill">
+                  <span class="skill-ico"><img src="Img/skills/figma-original.svg" alt="" width="40" height="40" loading="lazy"></span>
+                  <span>Figma</span>
+                </li>
               </ul>
             </div>
 
@@ -489,9 +553,8 @@
             </figcaption>
           </figure>
 
-            <!-- PLACEHOLDER: replace the text below with The Credit Room's own words once you have their quote. -->
-            <figure class="quote quote--pending">
-              <blockquote>Placeholder testimonial: this space is reserved for The Credit Room's feedback on their new website. Replace this text with their own words.</blockquote>
+            <figure class="quote">
+              <blockquote>Sihle took the time to understand our business and delivered a website that truly reflects who we are. His creativity, attention to detail, and commitment to quality made the entire process seamless. We’re proud of our new online presence and would confidently recommend him to anyone looking for a reliable web design partner.</blockquote>
               <figcaption>
                 <span class="avatar-mono" aria-hidden="true">TCR</span>
                 <div><div class="who">The Credit Room</div><div class="role">Credit and debt management</div></div>
