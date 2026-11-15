@@ -1,514 +1,420 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Sihle Sawula | My Resume Site</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>Sihle Sawula | Web Developer &amp; Graphic Designer in Cape Town</title>
+  <meta name="description" content="Sihle Sawula is a web developer, graphic designer and illustrator based in Cape Town, South Africa. Browse websites and designs built for real clients, and get in touch for freelance work.">
+  <meta name="author" content="Sihle Sawula">
+  <meta name="theme-color" content="#0d0f12">
 
- 
-  <link href="img/s-letter-logo-3d-type-logo-free-vector (1) - Copy.jpg" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sihle Sawula | Web Developer &amp; Graphic Designer">
+  <meta property="og:description" content="Websites and graphic design for real clients, built in Cape Town.">
+  <meta property="og:image" content="Img/propic.jpg">
 
-  
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link rel="icon" href="Img/s-letter-logo-3d-type-logo-free-vector%20(1)%20-%20Copy.jpg">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
- 
-  <link href="assets/css/style.css" rel="stylesheet">
-
+  <script>
+    // Runs before paint: enable JS-only styles and apply the saved theme (no flash).
+    document.documentElement.classList.add("js");
+    try {
+      var t = localStorage.getItem("theme");
+      if (t === "light" || t === "dark") document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  </script>
 </head>
 
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
- 
-  <i class="bi bi-list mobile-nav-toggle d-lg-none"></i>
+  <!-- ============ Header ============ -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#top"><span class="brand-dot" aria-hidden="true"></span>Sihle Sawula</a>
 
+      <nav id="nav-links" class="nav-links" aria-label="Main">
+        <a href="#work">Work</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#resume">Resume</a>
+        <a href="#testimonials">Clients</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-
-
-
-
-
-  
-  <header id="header" class="d-flex flex-column justify-content-center">
-
-    <nav id="navbar" class="navbar nav-menu">
-      <ul>
-        <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-        <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-        <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-        <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
-        <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
-        <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
-      </ul>
-    </nav>
-
-  </header>
-
-
-  <section id="hero" class="d-flex flex-column justify-content-center">
-    <div class="container" data-aos="zoom-in" data-aos-delay="100">
-      <h1><span style="color:orange">Sihle Sawula</span></h1>
-    
-
-  <p>I'm <span class="typed" data-typed-items="A Web Developer, A Graphic Designer, An Illustrator"></span></p>
-
-
-
-
-
-     
- <div class="social-links">
-        <a href="https://www.facebook.com/sihle.sawula/" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="https://www.instagram.com/sihle_sawula/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/sihle-sawula-a20500278/"  target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      <div class="nav-tools">
+        <button id="theme-toggle" class="icon-btn" type="button" aria-label="Toggle light and dark theme">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+        <button id="menu-toggle" class="icon-btn menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
       </div>
     </div>
-  </section>
+  </header>
 
   <main id="main">
 
-    <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>About</h2>
-          <p>Good day! My name is Sihle Sawula. I reside in Cape Town, South Africa. I am a web developer and a graphic designer. I am a dynamic, creative individual who excels in turning artwork and bringing it to life whether it is one of my personal projects or customer requested. Please feel free to go through my work.</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4">
-            <img src="Img/propic.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-8 pt-4 pt-lg-0 content">
-            <h3>Web Developer & Graphic Designer.</h3>
- 
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>06 September 1999</span></li>
-
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>(+27)74 840 3931</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Cape Town, South Africa</span></li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>25</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Qualification:</strong> <span>Web & Graphic Design</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>sihlesawula4@gmail.com</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
-                </ul>
-              </div>
+    <!-- ============ Hero ============ -->
+    <section id="top" class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <p class="eyebrow">Cape Town, South Africa</p>
+            <h1>Hi, I'm <span class="accent">Sihle Sawula.</span></h1>
+            <p class="hero-role">I'm a <strong id="role" data-roles="Web Developer|Graphic Designer|Illustrator">Web Developer</strong></p>
+            <p class="hero-lede">I turn ideas and artwork into websites and designs that look sharp and work properly, for businesses, artists and organisations. 5+ years of delivering from first concept to polished final.</p>
+            <div class="hero-actions">
+              <a class="btn btn--primary" href="#work">See my work</a>
+              <a class="btn btn--ghost" href="#contact">Get in touch</a>
             </div>
- 
+            <span class="availability">Available for freelance work</span>
+          </div>
+
+          <div class="portrait">
+            <img src="Img/propic.jpg" alt="Portrait of Sihle Sawula in a navy blazer" width="960" height="1280" fetchpriority="high">
           </div>
         </div>
 
+        <div class="stats reveal" aria-label="At a glance">
+          <div class="stat"><b>5+</b><span>Years experience</span></div>
+          <div class="stat"><b>5</b><span>Live client websites</span></div>
+          <div class="stat"><b>4</b><span>Client testimonials</span></div>
+          <div class="stat"><b>2</b><span>Disciplines: code &amp; design</span></div>
+        </div>
       </div>
     </section>
 
-
-    <section id="resume" class="resume">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Resume</h2>
-       
+    <!-- ============ Work ============ -->
+    <section id="work" class="section section--alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Selected work</p>
+          <h2>Websites and designs I've made</h2>
+          <p>Live websites built for clients, plus a few graphic design pieces. Every site below is online, so click through and try it.</p>
         </div>
 
-        <div class="row">
-          <div class="col-lg-6">
-            <h3 class="resume-title">Summary</h3>
-            <div class="resume-item pb-0">
-              <h4>Sihle Sawula</h4>
-              <p>An innovative and deadline-driven web developer and  graphic designer with 5+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.</p>
-              <ul>
-                <li>Cape Town, Western Cape</li>
-                <li>(+27) 74 840 3931</li>
-                <li>sihlesawula4@gmail.com</li>
+        <div class="filters reveal" role="group" aria-label="Filter projects">
+          <button class="filter" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter" type="button" data-filter="web" aria-pressed="false">Websites</button>
+          <button class="filter" type="button" data-filter="design" aria-pressed="false">Graphic design</button>
+        </div>
+
+        <div class="projects">
+
+          <article class="project reveal" data-category="web">
+            <a class="project-media" href="https://offensivapparel.com" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+              <img src="Img/offensivhomepage.png" alt="" loading="lazy">
+            </a>
+            <div class="project-body">
+              <span class="tag">Website · Clothing store</span>
+              <h3>Offensiv Apparel</h3>
+              <p>An online storefront for a streetwear brand, with a bold look that matches its "Wear Confidence" message.</p>
+              <div class="project-actions"><a class="link-arrow" href="https://offensivapparel.com" target="_blank" rel="noopener">Visit site<span class="sr-only"> (Offensiv Apparel)</span></a></div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-category="web">
+            <a class="project-media" href="https://ktemergencyservices.com" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+              <img src="Img/ktemergencyservices.png" alt="" loading="lazy">
+            </a>
+            <div class="project-body">
+              <span class="tag">Website · Paramedics</span>
+              <h3>KT Emergency Services</h3>
+              <p>A clear, trustworthy site for a medical care and training company, covering its services, team and community programmes.</p>
+              <div class="project-actions"><a class="link-arrow" href="https://ktemergencyservices.com" target="_blank" rel="noopener">Visit site<span class="sr-only"> (KT Emergency Services)</span></a></div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-category="web">
+            <a class="project-media" href="https://sihlesawula.github.io/Amplekz/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+              <img src="Img/amp.png" alt="" loading="lazy">
+            </a>
+            <div class="project-body">
+              <span class="tag">Website · Artist &amp; producer</span>
+              <h3>Amplekz</h3>
+              <p>A personal brand site for an artist and producer, with biography, music, apparel, store and gallery pages.</p>
+              <div class="project-actions"><a class="link-arrow" href="https://sihlesawula.github.io/Amplekz/" target="_blank" rel="noopener">Visit site<span class="sr-only"> (Amplekz)</span></a></div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-category="web">
+            <a class="project-media" href="https://sihlesawula.github.io/thecreditroom/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+              <img src="Img/tcroom.png" alt="" loading="lazy">
+            </a>
+            <div class="project-body">
+              <span class="tag">Website · Financial services</span>
+              <h3>The Credit Room</h3>
+              <p>A corporate site for a credit solutions company, with quick email and WhatsApp contact built in.</p>
+              <div class="project-actions"><a class="link-arrow" href="https://sihlesawula.github.io/thecreditroom/" target="_blank" rel="noopener">Visit site<span class="sr-only"> (The Credit Room)</span></a></div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-category="web">
+            <a class="project-media project-media--logo" href="https://sihlesawula.github.io/MK-Foundation/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+              <img src="Img/lioness.png" alt="" loading="lazy">
+            </a>
+            <div class="project-body">
+              <span class="tag">Website · Foundation</span>
+              <h3>Makhosi Mkhulu Foundation</h3>
+              <p>A calm, welcoming site for a spiritual foundation, helping its community find resources and connect.</p>
+              <div class="project-actions"><a class="link-arrow" href="https://sihlesawula.github.io/MK-Foundation/" target="_blank" rel="noopener">Visit site<span class="sr-only"> (Makhosi Mkhulu Foundation)</span></a></div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-category="design">
+            <button class="project-media" type="button" data-lightbox="Img/Untitled.png" data-alt="21st birthday poster design" aria-label="View 21st birthday poster full size">
+              <img src="Img/Untitled.png" alt="Gold and black 21st birthday poster with a portrait photo" loading="lazy">
+            </button>
+            <div class="project-body">
+              <span class="tag">Graphic design · Poster</span>
+              <h3>21st Birthday Poster</h3>
+              <p>A celebration poster with a black-and-gold theme, composed around a portrait photo.</p>
+            </div>
+          </article>
+
+          <article class="project reveal" data-category="design">
+            <button class="project-media" type="button" data-lightbox="Img/PhotshopIMG.png" data-alt="Illustrated sky scene with a giant hand and a falling figure" aria-label="View sky illustration full size">
+              <img src="Img/PhotshopIMG.png" alt="Illustrated sky scene with a giant hand reaching down towards a falling figure above flames" loading="lazy">
+            </button>
+            <div class="project-body">
+              <span class="tag">Illustration · Photoshop</span>
+              <h3>Sky Illustration</h3>
+              <p>A dramatic illustrated composite built in Photoshop, mixing hand-drawn elements with layered effects.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Services ============ -->
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">What I do</p>
+          <h2>Services</h2>
+          <p>Whether it's a full website or a single poster, I handle it from concept to final delivery.</p>
+        </div>
+
+        <div class="cards">
+          <div class="card reveal">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg></div>
+            <h3>Website design &amp; development</h3>
+            <p>Responsive, fast websites for businesses, artists and organisations, built to be easy to use and easy to maintain.</p>
+          </div>
+          <div class="card reveal">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></div>
+            <h3>Graphic design</h3>
+            <p>Posters, flyers and marketing material for print and digital, designed to get noticed.</p>
+          </div>
+          <div class="card reveal">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19l7-7 3 3-7 7zM18 13l-1.5-7.5L2 2l3.5 14.5L13 18zM2 2l7.6 7.6"/><circle cx="11" cy="11" r="2"/></svg></div>
+            <h3>Illustration</h3>
+            <p>Custom illustrated artwork and composites that bring a concept to life.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ About ============ -->
+    <section id="about" class="section section--alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">About me</p>
+          <h2>Dynamic, creative and deadline-driven</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>Good day! My name is Sihle Sawula and I live in Cape Town, South Africa. I'm a web developer and graphic designer who loves turning artwork into something real, whether it's a personal project or something a client asked for.</p>
+            <p>With 5+ years of experience, I design and build user-centred digital and print marketing material from the first idea to the final, polished deliverable. I care about getting the details right and handing things over on time.</p>
+            <p>Have a look through my work, and feel free to get in touch if you'd like to build something together.</p>
+          </div>
+
+          <ul class="facts reveal" aria-label="Quick facts">
+            <li><span>Based in</span><span>Cape Town, South Africa</span></li>
+            <li><span>Birthday</span><span>06 September 1999</span></li>
+            <li><span>Age</span><span data-birth="1999-09-06">27</span></li>
+            <li><span>Qualification</span><span>Web &amp; Graphic Design</span></li>
+            <li><span>Email</span><span><a href="mailto:sihlesawula4@gmail.com">sihlesawula4@gmail.com</a></span></li>
+            <li><span>Phone</span><span><a href="tel:+27748403931">(+27) 74 840 3931</a></span></li>
+            <li><span>Freelance</span><span>Available</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Resume ============ -->
+    <section id="resume" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Resume</p>
+          <h2>Experience, education and skills</h2>
+        </div>
+
+        <div class="resume-grid">
+          <div class="resume-col reveal">
+            <h3>Experience</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <h4>Freelance Web Developer &amp; Graphic Designer</h4>
+                <p class="timeline-meta">5+ years · Cape Town, Western Cape</p>
+                <ul>
+                  <li>Designed and developed websites for clients across retail, healthcare, finance, music and community organisations.</li>
+                  <li>Created digital and print marketing material, including posters and promotional graphics, from concept to final delivery.</li>
+                  <li>Worked directly with clients to understand their brand and turn it into a site that suits it. Clients describe the results as professional, attentive and easy to work with.</li>
+                </ul>
+              </div>
+            </div>
+
+            <h3>Education</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <h4>Web Development &amp; Graphic Design</h4>
+                <p class="timeline-meta">2019 – 2020</p>
+                <p>Boston City Campus, Cape Town, Western Cape, South Africa</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="resume-col reveal">
+            <h3>Skills</h3>
+            <div class="skill-group">
+              <h4>Web</h4>
+              <ul class="chips">
+                <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Responsive design</li><li>Static site hosting</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h4>Design</h4>
+              <ul class="chips">
+                <li>Photoshop</li><li>Posters &amp; flyers</li><li>Digital marketing graphics</li><li>Print design</li><li>Illustration</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h4>Working style</h4>
+              <ul class="chips">
+                <li>Client-focused</li><li>Deadline-driven</li><li>Concept to delivery</li>
               </ul>
             </div>
 
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>Web Developer & Graphic Design</h4>
-              <h5>2019 - 2020</h5>
-              <p><em>Boston City Campus, Cape Town, Western Cape, South Africa</em></p>
-            
-           
-          </div>
-          
-           
+            <div class="resume-cta">
+              <button class="btn btn--ghost" type="button" onclick="window.print()">Save resume as PDF</button>
+            </div>
           </div>
         </div>
-
       </div>
     </section>
 
-    <section id="portfolio" class="portfolio section-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Portfolio</h2>
-          <p>Below are images of posters/graphics and websites that i have created.</p>
+    <!-- ============ Testimonials ============ -->
+    <section id="testimonials" class="section section--alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Kind words</p>
+          <h2>What clients say</h2>
         </div>
 
-        <div class="row">
+        <div class="quotes">
+          <figure class="quote reveal">
+            <blockquote>At KT Emergency Services and Training we received great receptions from Sihle Sawula with regards to the Website that he developed for the company in which it captured the Purpose of the Project and its Objectives. We would recommend his services to others who wish to showcase his work.</blockquote>
+            <figcaption>
+              <img src="Img/KT-Emergency-Services.png" alt="" loading="lazy">
+              <div><div class="who">KT Emergency Services</div><div class="role">Paramedics company</div></div>
+            </figcaption>
+          </figure>
+
+          <figure class="quote reveal">
+            <blockquote>Working with Sihle Sawula has been a game-changer for my online presence. As an artist and producer, I needed a website that not only showcases my work but also captures the essence of my creative vision. Sihle Sawula took the time to understand my brand and crafted a website that’s both visually striking and easy to navigate. The design perfectly reflects my music, art, and creative journey, and it’s already helping me connect with a wider audience. I couldn’t be happier with the result and highly recommend them to anyone looking to elevate their online presence.</blockquote>
+            <figcaption>
+              <img src="Img/Lil-Amplekz-17_3_2_-removebg-preview%20(1)%20(1).png" alt="" loading="lazy">
+              <div><div class="who">Amplekz</div><div class="role">Artist &amp; producer</div></div>
+            </figcaption>
+          </figure>
+
+          <figure class="quote reveal">
+            <blockquote>Working with Sihle Sawula has been an enriching and transformative experience. As part of a spiritual institution, it was essential for us to have a website that not only reflects our values and mission but also fosters a sense of peace and connection for our community. The team understood our vision from the start and brought it to life with grace and attention to detail. The website is both beautiful and functional, making it easier for people to connect with us and access our resources. We are deeply grateful for their dedication and expertise, and we wholeheartedly recommend them to others seeking to enhance their online presence with authenticity and purpose.</blockquote>
+            <figcaption>
+              <img src="Img/lioness.png" alt="" loading="lazy">
+              <div><div class="who">Makhosi and Keya Foundation</div><div class="role">Spiritual entity</div></div>
+            </figcaption>
+          </figure>
+
+          <figure class="quote reveal">
+            <blockquote>Working with Sihle Sawula has been an absolute pleasure. As a clothing brand owner, having an online presence that truly reflects our style and values is crucial, and they exceeded my expectations in every way. From the initial concept to the final design, the team was attentive, professional, and innovative. The website not only looks amazing but also functions seamlessly, providing a fantastic experience for our customers. I’m incredibly grateful for their expertise and highly recommend them to anyone looking to elevate their brand online!</blockquote>
+            <figcaption>
+              <img src="Img/96-White-Background.png" alt="" loading="lazy">
+              <div><div class="who">Offensiv Apparel</div><div class="role">Clothing store</div></div>
+            </figcaption>
+          </figure>
         </div>
-
-
-<br>
-
-<br>
-
-
-<div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
-  <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-    <div class="portfolio-wrap">
-      <img src="Img/amp.png" class="img-fluid" alt="">
-      <div class="portfolio-info">
-        <div class="portfolio-links">
-        
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
-    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-      <div class="portfolio-wrap">
-        <img src="Img/ktemergencyservices.png" class="img-fluid" alt="">
-        <div class="portfolio-info">
-          <div class="portfolio-links">
-          
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
-
-
-
-
-    <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
-      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <div class="portfolio-wrap">
-          <img src="Img/offensivhomepage.png" class="img-fluid" alt="">
-          <div class="portfolio-info">
-            <div class="portfolio-links">
-            
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-
-
-
-
-
-
-      <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
-            <img src="Img/tcroom.png" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <div class="portfolio-links">
-              
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="Img/Untitled.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <div class="portfolio-links">
-                
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="Img/PhotshopIMG.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <div class="portfolio-links">
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="Img/Untitled.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <div class="portfolio-links">
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="Img/1221Untitled.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <div class="portfolio-links">
-                </div>
-              </div>
-            </div>
-          </div>
-
-          
-
-        </div>
-
       </div>
     </section>
 
-
-
-
-    <section id="services" class="services">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Services</h2>
-          <p>Below are websites developed by me and links are provided below to fully view. </p>
+    <!-- ============ Contact ============ -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="contact-cta reveal">
+          <p class="eyebrow">Contact</p>
+          <h2>Let's build something good.</h2>
+          <p>Need a website, a poster or a fresh look for your brand? Send me a message and I'll get back to you.</p>
+          <a class="btn btn--primary" href="mailto:sihlesawula4@gmail.com">Email me</a>
         </div>
 
-<ul class="list">
-  <li><a href="https://offensivapparel.com" target="_blank">www.offensivapparel.com</a></li>
-<li><a href="https://ktemergencyservices.com" target="_blank">www.ktemergencyservices.com</a></li>
-<li><a href="https://sihlesawula.github.io/Amplekz/" target="_blank">www.amplekz.co.za</a></li>
-<li><a href="https://sihlesawula.github.io/MK-Foundation/" target="_blank">www.makhosikeyafoundation.org</a></li>
-<li><a href="https://sihlesawula.github.io/thecreditroom/" target="_blank">www.thecreditroom.com</a></li>
-
-</ul>
-
-    
-      </div>
-    </section>
-
-	  
-    <section id="testimonials" class="testimonials section-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Testimonials</h2>
-        </div>
-
-        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
-
-          
-
-	
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="Img/KT-Emergency-Services.png" class="testimonial-img" alt="">
-                <h3>KT Emergency Services</h3>
-                <h4>Paramedics Company</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  "At KT Emergency Services and Training we received great receptions
-	               from Sihle Sawula with regards to the Website that he developed for the
-	                company in which it captured the Purpose of the Project and its
-                  Objectives. We would recommend his services to others who wish to
-                 showcase his work."
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
-
-
-
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="Img/Lil-Amplekz-17_3_2_-removebg-preview (1) (1).png" class="testimonial-img" alt="">
-                <h3>Amplekz</h3>
-                <h4>Artist & Producer</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  "Working with Sihle Sawula has been a game-changer for my online presence.
-                   As an artist and producer, I needed a website that not only showcases my work but also captures
-                    the essence of my creative vision. Sihle Sawula took the time to
-                     understand my brand and crafted a website that’s both visually striking and easy to navigate.
-                      The design perfectly reflects my music, art, and creative journey, and it’s already helping me
-                       connect with a wider audience. I couldn’t be happier with the result and highly recommend them
-                        to anyone looking to elevate their online presence."
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
-
-
-
-
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="Img/lioness.png" class="testimonial-img" alt="">
-                <h3>Makhosi And Keya Foundation</h3>
-                <h4>Spiritual Entity</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  "Working with Sihle Sawula has been an enriching and transformative experience.
-                   As part of a spiritual institution, it was essential for us to have a website that not only reflects
-                  our values and mission but also fosters a sense of peace and connection for our community.
-                    The team understood our vision from the start and brought it to life with grace and attention to detail.
-                    The website is both beautiful and functional, making it easier for people to connect with us and
-                    access our resources. We are deeply grateful for their dedication and expertise, and we wholeheartedly
-                    recommend them to others seeking to enhance their online presence with authenticity and purpose."
-
-
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
-
-
-
-
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="Img/96-White-Background.png" class="testimonial-img" alt="">
-                <h3>Offensiv Apparel</h3>
-                <h4>Clothing Store</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  "Working with Sihle Sawula has been an absolute pleasure.
-                   As a clothing brand owner, having an online presence that truly reflects our style and values is crucial,
-                    and they exceeded my expectations in every way. From the initial concept to the final design,
-                     the team was attentive, professional, and innovative. The website not only looks amazing but
-                      also functions seamlessly, providing a fantastic experience for our customers. I’m incredibly
-                       grateful for their expertise and highly recommend them to anyone looking to elevate their brand online!"
-
-
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
-
-
+        <div class="contact-grid reveal">
+          <a class="contact-card" href="mailto:sihlesawula4@gmail.com">
+            <span class="label">Email</span>
+            <span class="value">sihlesawula4@gmail.com</span>
+          </a>
+          <a class="contact-card" href="tel:+27748403931">
+            <span class="label">Phone</span>
+            <span class="value">+27 74 840 3931</span>
+          </a>
+          <div class="contact-card">
+            <span class="label">Location</span>
+            <span class="value">7395 Mano Street, Cape Town, Western Cape, South Africa</span>
           </div>
-          <div class="swiper-pagination"></div>
         </div>
-
-      </div>
-    </section>
-
-  
-    <section id="contact" class="contact">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Contact</h2>
-        </div>
-
-        <div class="row mt-1">
-
-          <div class="col-lg-4">
-            <div class="info">
-              <div class="address">
-                <i class="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
-                <p>7395 Mano Street, Cape Town, Western Cape, South Africa</p>
-              </div>
-
-              <div class="email">
-                <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <p>sihlesawula4@gmail.com</p>
-              </div>
-
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p>+27 74 840 3931</p>
-              </div>
-
-            </div>
-
-          </div>
-
-         
-        </div>
-
       </div>
     </section>
 
   </main>
 
-  <footer id="footer">
-    <div class="container">
-      <h3>SIHLE SAWULA</h3>
-      <p>I render website and graphic design services. For any enquiries please feel free to be in touch through my social media handles below</p>
-      <div class="social-links">
-        <a href="https://www.facebook.com/sihle.sawula/" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="https://www.instagram.com/sihle_sawula/" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/sihle-sawula-a20500278/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-      </div>
-
-      <div class="copyright">
-        &copy; Copyright <span style="color:orange">Sihle Sawula's Resume</span>. All Rights Reserved
-      </div>
-      <div class="credits">
-        
-        Designed by <a href="">Sihle Sawula</a>
+  <!-- ============ Footer ============ -->
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p style="margin:0">&copy; <span id="year">2026</span> Sihle Sawula. All rights reserved.</p>
+      <div class="socials">
+        <a class="icon-btn" href="https://www.linkedin.com/in/sihle-sawula-a20500278/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.5H3.6V9h3.5v11.5z"/></svg>
+        </a>
+        <a class="icon-btn" href="https://www.instagram.com/sihle_sawula/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        </a>
+        <a class="icon-btn" href="https://www.facebook.com/sihle.sawula/" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.2h-3.1V7.9c0-.9.3-1.5 1.6-1.5h1.7V3.5c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.1v2.3H7.7V13h2.7v8h3.1z"/></svg>
+        </a>
       </div>
     </div>
   </footer>
 
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <!-- Lightbox for design pieces -->
+  <dialog id="lightbox" class="lightbox" aria-label="Image preview">
+    <figure style="margin:0">
+      <button class="icon-btn" type="button" data-close aria-label="Close preview">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+      <img src="" alt="">
+      <figcaption></figcaption>
+    </figure>
+  </dialog>
 
-
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-
-  <script src="assets/js/main.js"></script>
-
+  <script src="js/main.js" defer></script>
 </body>
-
 </html>
