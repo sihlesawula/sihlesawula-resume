@@ -110,25 +110,57 @@
   }
 
   /* ---- Contact form ----
-     The site is static (no server), so instead of posting somewhere we open the
-     visitor's email app with the message already written. */
+     Static site, so there is no server of our own. The form posts to FormSubmit, which forwards the
+     message to my inbox. Without JavaScript the form still works as a normal POST to the same service. */
   const form = $("#contact-form");
   if (form) {
     const status = $("#form-status");
-    form.addEventListener("submit", (e) => {
+    const button = $("button[type='submit']", form);
+    const direct = form.getAttribute("action").replace(/^https?:\/\/formsubmit\.co\//, "");
+    const say = (html, cls) => {
+      status.className = "form-note" + (cls ? " " + cls : "");
+      status.innerHTML = html;
+    };
+
+    form.addEventListener("submit", async (e) => {
       e.preventDefault();
+      if (!form.reportValidity()) return;
+
       const data = new FormData(form);
+      if (data.get("_honey")) return; // a bot filled the hidden field: silently drop it
+
       const name = String(data.get("name") || "").trim();
       const email = String(data.get("email") || "").trim();
       const topic = String(data.get("topic") || "").trim();
       const message = String(data.get("message") || "").trim();
 
-      const to = form.getAttribute("action").replace(/^mailto:/, "");
-      const subject = `Portfolio enquiry: ${topic}`;
-      const body = `${message}\n\n${name}\n${email}`;
-      window.location.href =
-        `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      if (status) status.textContent = "Opening your email app. If nothing happens, email me directly at " + to + ".";
+      button.disabled = true;
+      button.textContent = "Sending…";
+      say("");
+
+      try {
+        const res = await fetch(form.dataset.endpoint, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify({
+            name, email, topic, message,
+            _subject: `Portfolio message: ${topic} (${name})`,
+            _replyto: email,
+            _template: "table",
+            _captcha: "false",
+          }),
+        });
+        const out = await res.json().catch(() => ({}));
+        if (!res.ok || String(out.success) !== "true") throw new Error(out.message || "send failed");
+
+        form.reset();
+        say("Thanks, your message has been sent.", "is-ok");
+      } catch (err) {
+        say(`That didn't go through. Please email me directly at <a href="mailto:${direct}">${direct}</a>.`, "is-error");
+      } finally {
+        button.disabled = false;
+        button.textContent = "Send message";
+      }
     });
   }
 
