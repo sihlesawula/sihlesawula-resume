@@ -3,28 +3,9 @@
 (() => {
   "use strict";
 
-  const root = document.documentElement;
   const $ = (sel, ctx = document) => ctx.querySelector(sel);
   const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  /* ---- Theme toggle (remembers the choice; falls back to the OS setting) ---- */
-  const themeBtn = $("#theme-toggle");
-  const systemDark = () => window.matchMedia("(prefers-color-scheme: dark)").matches;
-  const currentTheme = () => root.dataset.theme || (systemDark() ? "dark" : "light");
-
-  try {
-    const saved = localStorage.getItem("theme");
-    if (saved === "light" || saved === "dark") root.dataset.theme = saved;
-  } catch (_) { /* storage blocked: ignore */ }
-
-  if (themeBtn) {
-    themeBtn.addEventListener("click", () => {
-      const next = currentTheme() === "dark" ? "light" : "dark";
-      root.dataset.theme = next;
-      try { localStorage.setItem("theme", next); } catch (_) {}
-    });
-  }
 
   /* ---- Mobile menu ---- */
   const menuBtn = $("#menu-toggle");
@@ -67,23 +48,39 @@
     }
   }
 
-  /* ---- Project filter ---- */
-  const filterBtns = $$(".filter");
-  const projects = $$(".project");
-  filterBtns.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const f = btn.dataset.filter;
-      filterBtns.forEach((b) => b.setAttribute("aria-pressed", String(b === btn)));
-      projects.forEach((p) => { p.hidden = !(f === "all" || p.dataset.category === f); });
-    });
-  });
+  /* ---- Certificates carousel ---- */
+  const carousel = $("#cert-carousel");
+  if (carousel) {
+    const track = $(".carousel-track", carousel);
+    const prev = $("[data-dir='prev']", carousel);
+    const next = $("[data-dir='next']", carousel);
 
-  /* ---- Lightbox for design pieces ---- */
+    // Distance of one step = width of a slide plus the flex gap.
+    const step = () => {
+      const first = track.firstElementChild;
+      if (!first) return track.clientWidth;
+      const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+      return first.getBoundingClientRect().width + gap;
+    };
+    const update = () => {
+      const max = track.scrollWidth - track.clientWidth - 2;
+      prev.disabled = track.scrollLeft <= 2;
+      next.disabled = track.scrollLeft >= max;
+    };
+    prev.addEventListener("click", () => track.scrollBy({ left: -step(), behavior: reduceMotion ? "auto" : "smooth" }));
+    next.addEventListener("click", () => track.scrollBy({ left: step(), behavior: reduceMotion ? "auto" : "smooth" }));
+    track.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    update();
+  }
+
+  /* ---- Lightbox (certificate images) ---- */
   const box = $("#lightbox");
+  const lightboxTriggers = $$("[data-lightbox]");
   if (box && typeof box.showModal === "function") {
     const boxImg = $("img", box);
     const boxCap = $("figcaption", box);
-    $$("[data-lightbox]").forEach((btn) => {
+    lightboxTriggers.forEach((btn) => {
       btn.addEventListener("click", () => {
         boxImg.src = btn.dataset.lightbox;
         boxImg.alt = btn.dataset.alt || "";
@@ -95,7 +92,7 @@
     box.addEventListener("click", (e) => { if (e.target === box) box.close(); });
   } else {
     // No <dialog> support: just open the image in a new tab.
-    $$("[data-lightbox]").forEach((btn) =>
+    lightboxTriggers.forEach((btn) =>
       btn.addEventListener("click", () => window.open(btn.dataset.lightbox, "_blank", "noopener")));
   }
 
