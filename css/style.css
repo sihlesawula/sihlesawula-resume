@@ -230,10 +230,10 @@ ul { margin: 0; padding: 0; list-style: none; }
   }
 }
 
-/* Laptop screens and up: the photo sits further back, anchored at the bottom of a white backdrop (its own wall),
-   so the white shows and you take up less of the right-hand side. */
-@media (min-width: 1100px) {
-  .hero-visual { width: clamp(440px, 40vw, 720px); background: #f2f2f2; }
+/* Laptop screens and up: a wide, landscape photo panel taking half of the hero or more. The photo keeps the
+   same size (its height is unchanged), so the extra width just shows more of the white backdrop around you. */
+@media (min-width: 1200px) {
+  .hero-visual { width: clamp(560px, 50vw, 960px); background: #f2f2f2; }
   .hero-visual::before { display: none; }
   .hero-visual img {
     position: absolute; left: 0; bottom: 0; top: auto;
@@ -241,9 +241,10 @@ ul { margin: 0; padding: 0; list-style: none; }
     -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 16%);
             mask-image: linear-gradient(to bottom, transparent 0, #000 16%);
   }
+  /* long, eased fade so the headline stays readable where it reaches into the panel */
   .hero-visual::after {
     background:
-      linear-gradient(90deg, var(--bg) 0%, rgba(11, 26, 54, 0) 24%),
+      linear-gradient(90deg, var(--bg) 0%, rgba(11, 26, 54, .86) 10%, rgba(11, 26, 54, .5) 26%, rgba(11, 26, 54, 0) 48%),
       linear-gradient(0deg, var(--bg) 0%, rgba(11, 26, 54, 0) 16%);
   }
 }
